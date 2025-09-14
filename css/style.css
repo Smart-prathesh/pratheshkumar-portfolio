@@ -596,79 +596,256 @@ body {
 
 
 /* ===== Media Queries ===== */
+/* Tablet and below */
 @media screen and (max-width: 1024px) {
-  .main { flex-direction: column; padding:60px 5%; }
-  .main-left, .main-right { flex:unset; width:100%; text-align:center; }
-  .main-left img { width:220px; height:220px; }
-  .main-right h1 { font-size:2rem; }
-  .main-right h2 { font-size:1.5rem;margin-top: 50px; }
-  .main-right h3 { font-size:1.2rem; }
-  .main-right p { max-width:90%; font-size:15px; }
+  .main {
+    flex-direction: column;
+    padding: 60px 5%;
+  }
+  .main-left, .main-right {
+    flex: unset;
+    width: 100%;
+    text-align: center;
+  }
+  .main-left img {
+    width: 220px;
+    height: 220px;
+  }
+  .main-right h1 {
+    font-size: 2rem;
+  }
+  .main-right h2 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+  }
+  .main-right h3 {
+    font-size: 1.2rem;
+  }
+  .main-right p {
+    max-width: 90%;
+    font-size: 15px;
+  }
 }
 
+/* Small devices */
 @media screen and (max-width: 768px) {
-  .header { flex-direction: column; align-items:flex-start; padding:15px 20px; }
-  .hamburger { display:block; margin-bottom:10px; }
-  .header nav ul { display:none; flex-direction:column; width:100%; gap:10px; }
-  .header nav ul.active { display:flex; }
-  .header nav ul li a { width:100%; padding:10px 15px; display:block}}
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+  .hamburger {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .header nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .header nav ul.active {
+    display: flex;
+  }
+  .header nav ul li a {
+    width: 100%;
+    padding: 10px 15px;
+    display: block;
+    text-align: center;
+  }
+  .main {
+    padding: 40px 10px;
+  }
+  .main-left img {
+    width: 180px;
+    height: 180px;
+  }
+  .main-right h1 {
+    font-size: 1.6rem;
+  }
+  .main-right h2 {
+    font-size: 1.3rem;
+    margin-top: 20px;
+  }
+  .main-right h3 {
+    font-size: 1rem;
+  }
+  .main-right p {
+    font-size: 14px;
+    max-width: 100%;
+  }
 
+  /* Footer styles improved for mobile */
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .footer-left, .footer-right, .footer-form {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  .footer-form {
+    padding: 20px;
+  }
+  .footer-form input,
+  .footer-form textarea,
+  .footer-form button {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+  .projects {
+    padding: 40px 15px;
+  }
+  .projects h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    margin-top: 30px;
+  }
+  .project-card {
+    margin: 15px 0;
+    padding: 15px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .project-img img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .project-info h3 {
+    font-size: 1.2rem;
+  }
+  .project-info p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .project-info .btn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+  .footer-form {
+    padding: 15px;
+  }
+  .footer-form input,
+  .footer-form textarea,
+  .footer-form button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+@media (max-width: 768px) {
+  /* Common styling for About, Skills, Projects, Footer */
+  .about,
+  .skills,
+  .projects,
+  .footer {
+    padding: 30px 15px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+  }
+  .about h2,
+  .skills h2,
+  .projects h2,
+  .footer-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .about p,
+  .skills-category ul li,
+  .projects p,
+  .footer-left p,
+  .footer-right ul li a {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* About Section */
+  .about {
+    clip-path: none;
+    background: linear-gradient(135deg, #06b6d4, #7c3aed, #f59e0b);
+  }
+
+  /* Skills Section */
+  .skills {
+    background: linear-gradient(135deg, #06b6d4, #7c3aed, #f59e0b);
+  }
+
+  /* Projects Section */
+  .projects {
+    background: linear-gradient(135deg, #06b6d4, #7c3aed, #f59e0b);
+  }
+
+  /* Footer Section */
+  .footer {
+    background: linear-gradient(135deg, #06b6d4, #7c3aed, #f59e0b);
+  }
+
+  /* Additional tweaks */
+  .skills-category {
+    background: rgba(255,255,255,0.1);
+  }
+  .footer-form {
+    background: rgba(255,255,255,0.1);
+  }
+}
 @media (max-width: 992px) {
   .project-card {
     flex-direction: column; /* stack image & info */
     text-align: center;
   }
-
   .project-card.alt {
     flex-direction: column; /* override row-reverse */
   }
-
-  .project-img img {
+.project-img img {
     max-width: 100%;
     height: auto;
     margin: 0 0 15px 0;
   }
-
   .project-info {
     text-align: center;
     padding: 15px;
   }
-
   .project-info h3 {
     font-size: 1.3rem;
   }
-
   .project-info p {
     font-size: 0.95rem;
   }
 }
-
 /* Small Devices (Mobile) */
 @media (max-width: 576px) {
   .projects {
     padding: 50px 15px;
   }
-
   .projects h2 {
     font-size: 1.8rem;
     margin-bottom: 25px;
     margin-top: 50px;
   }
-
   .project-card {
     margin: 20px 0;
     padding: 15px;
   }
-
   .project-info h3 {
     font-size: 1.2rem;
   }
-
   .project-info p {
     font-size: 0.9rem;
     line-height: 1.4;
   }
-
   .project-info .btn {
     padding: 8px 14px;
     font-size: 0.9rem;
