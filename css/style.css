@@ -555,6 +555,79 @@ body {
 .footer-form button:hover .arrow {
   transform: translateX(5px);
 }
+/* ===== EXPERIENCE ===== */
+
+.experience {
+  padding: 70px 8%;
+  background: #fff;
+}
+
+.experience h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.experience-card {
+  max-width: 850px;
+  margin: 0 auto 25px;
+  padding: 25px 30px;
+  background: #f8f9fa;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+}
+
+.experience-card h3 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  color: #222;
+}
+
+.experience-card h4 {
+  margin: 0 0 18px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+}
+
+.experience-card p {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #444;
+}
+
+.experience-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.experience-card li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 50px 5%;
+  }
+
+  .experience h2 {
+    font-size: 27px;
+  }
+
+  .experience-card {
+    padding: 20px;
+  }
+
+  .experience-card h3 {
+    font-size: 20px;
+  }
+}
 /* Copyright */
 .copyright {
   text-align: center;
@@ -746,6 +819,7 @@ body {
   }
 }
 @media (max-width: 768px) {
+  
   /* Common styling for About, Skills, Projects, Footer */
   .about,
   .skills,
@@ -756,6 +830,7 @@ body {
     background-size: cover;
     background-position: center;
   }
+
   .about h2,
   .skills h2,
   .projects h2,
@@ -763,6 +838,7 @@ body {
     font-size: 1.8rem;
     margin-bottom: 20px;
   }
+
   .about p,
   .skills-category ul li,
   .projects p,
@@ -797,55 +873,68 @@ body {
   .skills-category {
     background: rgba(255,255,255,0.1);
   }
+
   .footer-form {
     background: rgba(255,255,255,0.1);
   }
 }
+
 @media (max-width: 992px) {
   .project-card {
     flex-direction: column; /* stack image & info */
     text-align: center;
   }
+
   .project-card.alt {
     flex-direction: column; /* override row-reverse */
   }
-.project-img img {
+
+  .project-img img {
     max-width: 100%;
     height: auto;
     margin: 0 0 15px 0;
   }
+
   .project-info {
     text-align: center;
     padding: 15px;
   }
+
   .project-info h3 {
     font-size: 1.3rem;
   }
+
   .project-info p {
     font-size: 0.95rem;
   }
 }
+
 /* Small Devices (Mobile) */
 @media (max-width: 576px) {
   .projects {
     padding: 50px 15px;
   }
+
   .projects h2 {
     font-size: 1.8rem;
     margin-bottom: 25px;
     margin-top: 50px;
   }
+
   .project-card {
     margin: 20px 0;
     padding: 15px;
   }
+
   .project-info h3 {
     font-size: 1.2rem;
   }
+
   .project-info p {
     font-size: 0.9rem;
     line-height: 1.4;
   }
+
   .project-info .btn {
     padding: 8px 14px;
     font-size: 0.9rem;
